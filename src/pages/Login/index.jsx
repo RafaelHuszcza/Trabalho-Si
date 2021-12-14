@@ -1,0 +1,127 @@
+import React, { useState, useRef, useEffect } from 'react';
+import { useHistory, Link } from 'react-router-dom';
+import { useAuth } from '../../context/authContext';
+import { useToast } from '../../context/toastContext';
+
+import api from '../../utils/api';
+
+import {EyeInvisibleOutlined , EyeOutlined} from "@ant-design/icons"
+
+import UIButton from './Button/index';
+import Header from '../../components/Header/index';
+import Footer from '../../components/Footer/index';
+import errorHandle from '../../helpers/errorHandle'
+
+import './styles.css';
+
+const login = async ({ login, password }) => {
+  try{
+      const regex = /^(?=.*[@!#$%^&*()/\\])[@!#$%^&*()/\\a-zA-Z0-9]{6,20}$/
+
+      if (login.length === 0) return { error: 'Insira um nome de usuário.' };
+      else if (password.length === 0) return { error: 'Insira uma senha.' };
+      else if (password.length > 20 || password.length < 6) return {error: 'A senha deve conter entre 6 a 20 caracteres'}
+      else if(!regex.test(password))return {error: 'A senha deve conter caracteres especiais'}
+          
+      const content = { login: '12345678', password: '#password' }
+      
+      const { data } = await api.post("/login", content)
+      const user = {...data.user, user_type: 'user'}
+      // const data = { user:{id: "1", name: "joao", company_id: "1", user_type: "admin"}, token: '123456' }
+      return { user, token: data.token, error: null };
+   
+    } catch (e) {
+        const error = errorHandle(e);
+        return { user: null, token: null, error: error[0] };
+    }
+}
+
+const Login = () => {
+  const [error, setError] = useState(null);
+  const { signIn } = useAuth()
+  const { addToast } = useToast()
+  const history = useHistory();
+  const formRef = useRef()
+  const [inputType, setInputType] = useState("password")
+  
+  async function onSubmit(event) {
+    event.preventDefault();
+
+    const inputValues = [...formRef.current.elements]
+      .reduce((total, {name, value})=>{
+        if (name) return { ...total, [name]:value }
+        return total // Anular os botões
+       
+      },{})
+
+    const { user, token, error } = await login(inputValues);
+    if (error) {
+      setError(error);
+      addToast({ type: "error", title: "Erro ao logar", message:"Cheque as credenciais" })
+    }
+    
+    if (token && user) {
+        addToast({ type: "success", title: "Login", message:"Realizado com sucesso" })
+        signIn(user, token)
+        
+        const url = user.user_type === 'mechanical' 
+        ? '/mecanico'
+        : '/ferramentas'
+        
+        history.push(url);
+    }
+  }
+ 
+  return (
+    <div>
+      <Header/>
+      <div className="login">
+        <div className="user-login">
+          <form onSubmit={onSubmit} ref={formRef}>
+            <div className="user-login__form-control">
+              <label htmlFor="user">E-mail:</label>
+              <input
+                placeholder="exemplo@mail.com"
+                id="user"
+                type="text"
+                name="login"
+              />
+            </div>
+            <div className="user-login__form-control" style={{position: 'relative'}}>
+              <label htmlFor="password">Senha:</label>
+              <input
+                placeholder="********"
+                id="password"
+                type={inputType}
+                name="password"
+              />
+              <div style={{ fontSize: "1.2rem", position: 'absolute', top: '40px', right: '10px'}}>
+              {inputType === 'password' && <EyeOutlined    onClick={()=>{setInputType('text')}}/>} 
+              {inputType === 'text' && <EyeInvisibleOutlined   onClick={()=>{setInputType('password')}}/>}
+              </div>
+            </div>
+
+            {error && <div className="user-login__error">{error}</div>}
+                  
+            <UIButton
+              type="submit"
+              theme="contained-green"
+              className="user-login__submit-button"
+              rounded
+            >
+              Entrar
+            </UIButton>
+
+            <div className="user-login__forgot-password">
+              <Link to="/esqueceu-senha">Esqueceu sua senha?</Link>
+            </div>
+          </form>
+        </div>
+      </div>
+        
+      <Footer/>
+    </div >
+  );
+};
+
+export default Login;

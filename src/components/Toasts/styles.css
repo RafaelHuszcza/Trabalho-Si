@@ -1,0 +1,36 @@
+.toast-container{
+  position: absolute;
+  top: 2.4rem;
+  right: 0;
+  overflow: hidden;
+  width: 16rem;
+}
+
+.toast-container div + div{
+  margin-top: 0.5rem;
+} 
+.toast{
+  position: relative;
+  width: 14rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+
+  display: flex;
+  padding: 0.5rem;
+
+  color: #4e4e4e;
+}
+
+.toast > div{
+  margin: 0 auto 0 0.6rem;
+  line-height: 1rem;
+}
+.toast p{
+  font-size: 0.8rem;
+}
+.toast > span{
+  padding-top: 0.1rem;
+}
+.toast div + span:hover{
+  cursor: pointer;
+}
