@@ -4,8 +4,8 @@ import { useHistory } from "react-router-dom";
 import "./styles.css";
 
 const News = () => {
-  const [textToAppear, setTextToAppear] = useState([{content:"",id:""}])
-  const [collapsed, setCollapsed] = useState(false);
+ 
+  // const [collapsed, setCollapsed] = useState(false);
   
   const [news, setNews] = useState([
     
@@ -71,11 +71,11 @@ const News = () => {
   
   ]);
 
-  const toggleCollapsed = () => {
-    let tableNews = document.querySelector(".tableNews");
-    tableNews.classList.toggle("open");
-    setCollapsed(!collapsed);
-  };
+  // const toggleCollapsed = () => {
+  //   let tableNews = document.querySelector(".tableNews");
+  //   tableNews.classList.toggle("open");
+  //   setCollapsed(!collapsed);
+  // };
   const history = useHistory();
   return (
     <div className="news">
@@ -99,9 +99,9 @@ const News = () => {
                 <td className= "newsText">{props.content.text}</td>             
                 </tr>  
                 <tr>
-                <td className = "newsMore"><p   >Clique para mais</p></td>  
+                <td className = "newsMore"><p onClick={()=>{history.push("/login")}}  >Clique para mais</p></td>
+ 
                 {/* onClick={()=>{toggleCollapsed()}}  */}
-                {/* onClick={()=>{history.push(`/news/${props.id}`)}}  */}
                 {/* onClick={()=>{
                       setTextToAppear([{content: props.content.text, id: props.id }])
                          }}         */}
@@ -114,13 +114,7 @@ const News = () => {
 
 
           ))} 
-           <div>
-            { textToAppear[0].content != "" && (
-            <p>{textToAppear[0].content}</p>
-            
-            )}
-
-            </div>
+           
           </div>        
     </div>
   );

@@ -17,10 +17,6 @@
   flex-direction: column;
   align-items: center;
 }
-.newsFeed .oneNews {
-  display: flex;
-
-}
 
 .newsFeed .tableNews {
   width: 40rem;
@@ -30,8 +26,7 @@
   margin: 1rem;
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);
   text-align: justify;
- 
-  
+   
 }
 .newsImage {
   overflow: hidden;
@@ -59,6 +54,14 @@
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
+.newsType {
+  display: flex;
+  color: #005489;
+  font-weight: bold;
+  padding-left: 1rem;
+
+}
+
 .newsTitle {
   font-weight: bold;
   font-size: 20px;
@@ -69,41 +72,55 @@
 }
 
 .newsDate {
+  display: none;  
+  font-size: 12px;
+  vertical-align:bottom;
+  padding-bottom: 5px ;
+  justify-content: center;
+}
+
+.newsText {
+  font-size:  12px;
+  display: none;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 5rem;
+  overflow: hidden; 
+ 
+}
+
+.newsMore{
+  display: none;
+  text-decoration: underline;
   font-size: 14px;
   vertical-align:bottom;
   padding-bottom: 5px ;
-  text-align: center;
-  
+  justify-content: center;
+  cursor: pointer;
 }
-.newsMore{
-    text-decoration: underline;
-    font-size: 14px;
-    vertical-align:bottom;
-    padding-bottom: 5px ;
-    text-align: center;
-    cursor: pointer;
+.tableNews:hover .newsMore{
+  display: flex;
+
 }
 .newsMore:hover{
-  font-size: 15px;
-}
-.newsText {
-  visibility:hidden;
-  position: absolute;
+font-size: 15px;
 }
 
-.tableNews.open .newsText{
-  visibility: visible;
+.tableNews:hover .newsText{
+  display: flex;
+
 }
-
-
-.newsType {
-  color: #005489;
-  font-weight: bold;
-  padding-left: 1rem;
-
+.tableNews:hover .newsDate{
+  display: flex;
 }
 .tableNews:hover .newsTitle {
   color: #005489;
   transition: color 0.1s;
+  font-size: 16px;
   
+}
+
+.tableNews:hover .newsType {
+  display: none;
+
 }
