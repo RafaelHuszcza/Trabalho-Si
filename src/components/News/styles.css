@@ -8,13 +8,102 @@
   flex: 1;
   border-top: 2px solid #00bedd;
   border-bottom: 2px solid #00bedd;
-  background-color: #001c43;
+  background-color: #F4F4F4;
   flex-direction: column;
 }
 
 .news .newsFeed {
-  background-color: #00bedd;
+  display: flex;
   flex-direction: column;
-  color: white;
+  align-items: center;
+}
+.newsFeed .oneNews {
+  display: flex;
+
 }
 
+.newsFeed .tableNews {
+  width: 40rem;
+  height: 15rem;
+  padding: 0px;
+  background-color: white;
+  margin: 1rem;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);
+  text-align: justify;
+ 
+  
+}
+.newsImage {
+  overflow: hidden;
+  padding: 0;
+  margin:0px;
+  width: 20rem;
+  height: 15rem;
+}
+
+ .newsImage img {
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+  transition: transform .5s ease;
+}
+.newsImage:hover img {
+  transform: scale(1.1);
+}
+
+.newsFeed .tableNews:hover {
+  margin-top: 0.7rem;
+  margin-bottom: 1.3rem;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.newsTitle {
+  font-weight: bold;
+  font-size: 20px;
+  vertical-align: text-top;
+  padding-top: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.newsDate {
+  font-size: 14px;
+  vertical-align:bottom;
+  padding-bottom: 5px ;
+  text-align: center;
+  
+}
+.newsMore{
+    text-decoration: underline;
+    font-size: 14px;
+    vertical-align:bottom;
+    padding-bottom: 5px ;
+    text-align: center;
+    cursor: pointer;
+}
+.newsMore:hover{
+  font-size: 15px;
+}
+.newsText {
+  visibility:hidden;
+  position: absolute;
+}
+
+.tableNews.open .newsText{
+  visibility: visible;
+}
+
+
+.newsType {
+  color: #005489;
+  font-weight: bold;
+  padding-left: 1rem;
+
+}
+.tableNews:hover .newsTitle {
+  color: #005489;
+  transition: color 0.1s;
+  
+}

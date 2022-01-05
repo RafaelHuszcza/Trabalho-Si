@@ -1,6 +1,6 @@
 import React from "react";
 
-import {UserOutlined,PoweroffOutlined } from "@ant-design/icons"
+import {PoweroffOutlined } from "@ant-design/icons"
 
 import { useHistory } from "react-router-dom";
 

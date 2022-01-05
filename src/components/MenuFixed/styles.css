@@ -11,34 +11,29 @@
 }
 .menu .menuOptions{
   display: flex;
-  margin-right: 5vw;
+  margin-right: 2vw;
   font-size: 1.25em;
   justify-content: center;
   align-items: center;
 }
 .menuOptions .buttonMenu {
-  width: 70%;
-  background-color: #005489;
-  color: #fff;
-  border-radius: 25%;
-  padding: 10px;
-  
+  background-color: white;
   text-decoration: none;
+  color: #005489;
+  font-weight: bold; 
+  padding: 10px;
+  cursor: pointer;  
   transition: color 200ms;
   border: 0;
   font-size: 16px;
   text-align: center;
-  cursor: pointer;
+  
 }
-
-
 .buttonMenu:hover {
-  background-color: #00b894;
-  border-color: #00b894;
-  color: #fff;
+  font-size: 17px;  
 }
 .menu .rightIcons {
-  margin-left: 1rem;
+  margin-left: 0.5rem;
 }
 .menu .menuLogo {
   margin-left: 5vw;
@@ -47,7 +42,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 .menuLogo #logo{
   height: 100%;

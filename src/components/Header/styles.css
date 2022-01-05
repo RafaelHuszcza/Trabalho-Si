@@ -11,17 +11,27 @@
   justify-content: space-between;
 }
 
+.headerLogo #menuTitle {
+  width: 70%;
+  font-size: 1.8rem;
+  color: #005489;
+  font-weight: normal;
+  text-align: left;
+  width: 100%;
+}
+
 
 .header .headerLogo {
   margin-left: 5vw;
   height: 100%;
   display: flex;
+  width: 20rem;
   justify-content: center;
   align-items: center;
 }
 .header #logo{
   height: 100%;
-  width: 100%;
+  width: 30%;
 }
 
 .headerTitle {
