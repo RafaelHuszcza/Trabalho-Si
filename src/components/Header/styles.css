@@ -10,26 +10,21 @@
   border-bottom: 2px solid #00bedd;
   justify-content: space-between;
 }
-.header .header__options{
-  display: flex;
-  margin-right: 5vw;
-  font-size: 1.25em;
-}
-.header .right-icons {
-  margin-left: 1rem;
-}
-.header__logo {
+
+
+.header .headerLogo {
   margin-left: 5vw;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.header__logo img {
+.header #logo{
   height: 100%;
   width: 100%;
 }
-.header__title {
+
+.headerTitle {
   font-size: 1.25em;
   color: #001c43;
   font-weight: normal;
@@ -39,7 +34,7 @@
 }
 
 @media (max-width: 768px) {
-  .header__title {
+  .headerTitle {
     display: None;
   }
   .header {

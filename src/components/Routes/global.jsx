@@ -1,21 +1,18 @@
 /* eslint-disable */
 import React from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import { Route} from 'react-router-dom';
 
-import { useAuth } from '../../context/authContext'
+const RoutesGlobal = ({ component: Component ,...rest }) => {
 
-const RoutesForgot = ({ component: Component ,...rest }) => {
-  const { isLogged } = useAuth()
 
   return (
     <Route
       {...rest}
-      render={() => isLogged()
-        ? <Component {...rest} />
-        : <Redirect to="/login" />
+      render={() => <Component {...rest} />
+
       }
     />
   )
 }
 
-export default RoutesForgot;
+export default RoutesGlobal;

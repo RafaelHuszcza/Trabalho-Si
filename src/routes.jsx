@@ -8,28 +8,21 @@ import {
 } from "react-router-dom";
 
 import RoutesLogin from "./components/Routes/login";
-import RoutesPrivate from "./components/Routes/private";
-import RoutesForgot from "./components/Routes/forgot";
+import RoutesGlobal from "./components/Routes/global";
 
 
 import Login from "./pages/Login";
+import Feed from "./pages/Feed";
 
 
 const PagesRoot = () => (
   <Router>
     <Switch>
       <RoutesLogin path="/login" component={Login}/>
-
-      
-
-      <RoutesPrivate path="/admin" component={Login} blockUser={["user"]}/>
-      <RoutesPrivate path="/feed" component={Login}/>
-      
-
-      <RoutesForgot path="/esqueceu-senha" component={Login}/>
-
+      <RoutesGlobal path="/feed" component={Feed}/>
+      <RoutesGlobal path="/contato" component={Login}/>
       <Route path="/">
-        <Redirect to="/login"/>
+        <Redirect to="/feed"/>
       </Route>
     </Switch>
   </Router>

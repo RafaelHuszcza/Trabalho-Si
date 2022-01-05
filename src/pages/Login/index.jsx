@@ -1,9 +1,9 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef} from 'react';
 import { useHistory, Link } from 'react-router-dom';
 import { useAuth } from '../../context/authContext';
 import { useToast } from '../../context/toastContext';
 
-import api from '../../utils/api';
+
 
 import {EyeInvisibleOutlined , EyeOutlined} from "@ant-design/icons"
 
@@ -25,10 +25,10 @@ const login = async ({ login, password }) => {
           
       const content = { login: '12345678', password: '#password' }
       
-      const { data } = await api.post("/login", content)
-      const user = {...data.user, user_type: 'user'}
-      // const data = { user:{id: "1", name: "joao", company_id: "1", user_type: "admin"}, token: '123456' }
-      return { user, token: data.token, error: null };
+     
+  
+      const data = { user:{id: "1", name: "joao"}, token: '123456' }
+      return { user: data.user, token: data.token, error: null };
    
     } catch (e) {
         const error = errorHandle(e);
@@ -50,7 +50,7 @@ const Login = () => {
     const inputValues = [...formRef.current.elements]
       .reduce((total, {name, value})=>{
         if (name) return { ...total, [name]:value }
-        return total // Anular os botões
+        return total
        
       },{})
 
@@ -62,13 +62,8 @@ const Login = () => {
     
     if (token && user) {
         addToast({ type: "success", title: "Login", message:"Realizado com sucesso" })
-        signIn(user, token)
-        
-        const url = user.user_type === 'mechanical' 
-        ? '/mecanico'
-        : '/ferramentas'
-        
-        history.push(url);
+        signIn(user, token)       
+        history.push("/feed");
     }
   }
  

@@ -5,19 +5,14 @@ import { Route, Redirect } from 'react-router-dom';
 import { useAuth } from '../../context/authContext'
 
 
-const RoutesPrivate = ({ component: Component, blockUser=[] ,...rest }) => {
-  const { data, isLogged } = useAuth()
-  const { user_type } = data?.user
+const RoutesPrivate = ({ component: Component, ...rest }) => {
+  const { isLogged } = useAuth()
 
   return (
     <Route
       {...rest}
-      render={() => isLogged()
-        ? blockUser.includes(user_type)
-        ? user_type !== 'admin'
+      render={() => isLogged()    
         ? <Redirect to="/feed" />
-        : <Redirect to="/admin"/>
-        :  <Component {...rest}/>
         : <Redirect to="/login" />
       }
     />
