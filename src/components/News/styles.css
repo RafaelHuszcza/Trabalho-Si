@@ -10,6 +10,7 @@
   border-bottom: 2px solid #00bedd;
   background-color: #F4F4F4;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .news .newsFeed {
