@@ -7,7 +7,7 @@ const ToastContext = createContext({});
 
 export const ToastProvider = ({ children }) => {
   const [toasts, setToasts] = useState([])
-  const [toastsToAdd, setToastsToAdd] = useState([])
+  // const [toastsToAdd, setToastsToAdd] = useState([])
 
   const addToast = useCallback((newToast) =>{
     newToast = { ...newToast, id:uuid() }

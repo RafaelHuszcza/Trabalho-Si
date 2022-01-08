@@ -7,8 +7,6 @@ import "./styles.css";
 const Header = () => {
   const history = useHistory();
 
-
-  
   return (
     <div className="header">
       <div className="headerLogo" onClick={() => history.push('/home')}>
