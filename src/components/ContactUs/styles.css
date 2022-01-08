@@ -1,0 +1,18 @@
+.contact {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  min-height: 84vh;
+  background-color: #F4F4F4;
+  justify-content: center;
+  
+}
+.contact .contactContainer {
+  display: flex;
+  width: 70vw;
+  height: 100%;
+  background-color: #F4F4F4;
+  justify-content: center
+  
+}
