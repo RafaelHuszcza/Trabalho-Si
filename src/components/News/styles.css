@@ -1,33 +1,38 @@
 .news {
+  display: flex;
   padding: 0;
   margin: 0;
   width: 100%;
   min-height: 84vh;
-  display: flex;
-  justify-content: center;
-  flex: 1;
-  border-top: 2px solid #00bedd;
-  border-bottom: 2px solid #00bedd;
   background-color: #F4F4F4;
-  flex-direction: column;
-  cursor: pointer;
+  justify-content: center;
+  
+}
+.newsContainer {
+  display: flex;
+  width: 70vw;
+  height: 100%;
+  background-color: #F4F4F4;
+  justify-content: center
+  
 }
 
 .news .newsFeed {
   display: flex;
   flex-direction: column;
+  width: 50vw;
   align-items: center;
+  margin-bottom:3vh ;
 }
 
 .newsFeed .tableNews {
-  width: 40rem;
+  width: 100%;
   height: 15rem;
-  padding: 0px;
   background-color: white;
-  margin: 1rem;
+  margin-top: 3vh;
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);
   text-align: justify;
-   
+  border-radius: 1rem;   
 }
 .newsImage {
   overflow: hidden;
@@ -35,6 +40,7 @@
   margin:0px;
   width: 20rem;
   height: 15rem;
+  border-radius: 5%;
 }
 
  .newsImage img {
@@ -44,9 +50,6 @@
   padding: 0px;
   margin: 0px;
   transition: transform .5s ease;
-}
-.newsImage:hover img {
-  transform: scale(1.1);
 }
 
 .newsFeed .tableNews:hover {
@@ -124,4 +127,54 @@ font-size: 15px;
 .tableNews:hover .newsType {
   display: none;
 
+}
+
+.newsFilter {
+  display: flex;
+  align-items: left;
+  width: 15vw;
+  height:30vh;
+  padding: 0.5rem;
+  margin-left: 5vw;
+  background-color: white;
+  border-radius: 1rem;
+  /* position: fixed;
+  right: 15vw;
+  top:43vh; */
+  margin-top: 3vh;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+ 
+}
+.newsFilter::-webkit-scrollbar{  
+  display: none;
+}
+
+.selectFilter{
+  color: #005489;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.filterButton{
+  margin-bottom:0.3rem ;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  cursor: pointer;  
+  transition: color 200ms;
+  font-size: 16px;
+  border-radius: 5rem;
+  border: 2px solid #005489;
+}
+
+.filterButton:focus{
+  background-color: #00bedd;
+}
+.filterButton:hover{
+  background-color: #00bedd;
 }

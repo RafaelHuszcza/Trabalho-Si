@@ -5,6 +5,7 @@
   background-color: white;
   align-items: center;
   bottom: 0;
+  border-top: 2px solid #00bedd; 
   justify-content: center;
   align-items: center;
 }

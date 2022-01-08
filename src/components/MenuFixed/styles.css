@@ -8,45 +8,9 @@
   background-color: white;
   align-items: center;
   justify-content: space-between;
-}
-.menu .menuOptions{
-  display: flex;
-  margin-right: 2vw;
-  font-size: 1.25em;
-  justify-content: center;
-  align-items: center;
-}
-.menuOptions .buttonMenu {
-  background-color: white;
-  text-decoration: none;
-  color: #005489;
-  font-weight: bold; 
-  padding: 10px;
-  cursor: pointer;  
-  transition: color 200ms;
-  border: 0;
-  font-size: 16px;
-  text-align: center;
-  
-}
-.buttonMenu:hover {
-  font-size: 17px;  
-}
-.menu .rightIcons {
-  margin-left: 0.5rem;
-}
-.menu .menuLogo {
-  margin-left: 5vw;
-  height: 100%;
-  width: 20rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-.menuLogo #logo{
-  height: 100%;
-  width: 30%;
+  border-bottom: 2px solid #00bedd;
+  position: sticky;
+ 
 }
 .menuLogo #menuTitle {
   width: 70%;
@@ -55,7 +19,47 @@
   font-weight: normal;
   text-align: left;
   width: 100%;
+}
 
+.menu .menuLogo {
+  margin-left: 5vw;
+  height: 100%;
+  width: 20rem;
+  display: flex;
+  
+  align-items: center;
+  cursor: pointer;
+}
+.menuLogo #logo{
+  height: 100%;
+  width: 30%;
+}
+
+.menu .menuOptions{
+  display: flex;
+  margin-right: 2vw;
+  font-size: 1.25em;
+  justify-content: right;
+  width: 100%;
   
 }
+.menuOptions .buttonMenu {
+  background-color: white;
+  text-decoration: none;
+  color: #005489;
+  font-weight: bold; 
+  padding: 10px;
+  margin-left:0.5rem ;
+  cursor: pointer;  
+  transition: color 200ms;
+  border: 0;
+  font-size: 20px;
+  text-align: center;
+}
+.buttonMenu:hover {
+  font-size: 22px;  
+}
+
+
+
 

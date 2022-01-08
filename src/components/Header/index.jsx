@@ -5,17 +5,19 @@ import Logo from "../../assets/M.png";
 import "./styles.css";
 
 const Header = () => {
-  const { push } = useHistory()
+  const history = useHistory();
 
-  const goToHome = () => push('/')
+
   
   return (
     <div className="header">
-      <div className="headerLogo" onClick={() => goToHome()}>
+      <div className="headerLogo" onClick={() => history.push('/feed')}>
         <img id="logo" src={Logo} alt="Logo Meta Team" />
         <p id="menuTitle">eta Team</p>
       </div>
-      <h1 className="headerTitle">Notícias Tec</h1>
+      <div className="headerTitle">
+      <h1>Notícias Tec</h1>
+      </div>
     </div>
   );
 };
