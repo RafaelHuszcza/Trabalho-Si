@@ -6,8 +6,7 @@ export default function handleError(error){
         // Erro no banco de dados
         case 'Error accessing database.': return [`Status ${response.status} - Erro ao acessar o banco de dados`, response.data];
         
-        // Login   
-        
+        // Erro no Login           
         case 'Login error': 
             switch(response.data){
                 case 'User does not exist. Check credentials.': return ['Usuário não existe. Cheque as credenciais.'];

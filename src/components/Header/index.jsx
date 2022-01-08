@@ -11,7 +11,7 @@ const Header = () => {
   
   return (
     <div className="header">
-      <div className="headerLogo" onClick={() => history.push('/feed')}>
+      <div className="headerLogo" onClick={() => history.push('/home')}>
         <img id="logo" src={Logo} alt="Logo Meta Team" />
         <p id="menuTitle">eta Team</p>
       </div>

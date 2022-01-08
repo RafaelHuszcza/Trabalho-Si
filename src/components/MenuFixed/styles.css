@@ -1,18 +1,14 @@
 .menu {
-  top: 0;
   display: flex;
-  flex: 1;
-  flex-direction: row;
   width: 100%;
   height: 10vh;
   background-color: white;
   align-items: center;
   justify-content: space-between;
   border-bottom: 2px solid #00bedd;
-  position: sticky;
- 
+  position: sticky; 
 }
-.menuLogo #menuTitle {
+.menu .menuLogo #menuTitle {
   width: 70%;
   font-size: 1.8rem;
   color: #005489;
@@ -26,11 +22,10 @@
   height: 100%;
   width: 20rem;
   display: flex;
-  
   align-items: center;
   cursor: pointer;
 }
-.menuLogo #logo{
+.menu .menuLogo #logo{
   height: 100%;
   width: 30%;
 }
@@ -43,7 +38,7 @@
   width: 100%;
   
 }
-.menuOptions .buttonMenu {
+.menu .menuOptions .menuButton {
   background-color: white;
   text-decoration: none;
   color: #005489;
@@ -56,7 +51,7 @@
   font-size: 20px;
   text-align: center;
 }
-.buttonMenu:hover {
+.menu .menuButton:hover {
   font-size: 22px;  
 }
 

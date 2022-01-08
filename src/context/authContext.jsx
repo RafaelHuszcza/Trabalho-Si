@@ -8,7 +8,7 @@ export const AuthProvider = ({ children }) => {
     const user = localStorage.getItem("@meta:user");
     if (token && user) return { user: JSON.parse(user), token };
     return {
-      user: { id: "", name: "", user_type: ""},
+      user: { id: "", name: "", userType: ""},
       token: "",
     };
   });
@@ -25,7 +25,7 @@ export const AuthProvider = ({ children }) => {
   const signOut = () => {
     localStorage.clear();
     setData({
-      user: { id: "", name: "", user_type: ""},
+      user: { id: "", name: "", userType: ""},
       token: "",
     });
   };

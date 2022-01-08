@@ -1,4 +1,4 @@
-.toast-container{
+.toastContainer{
   position: absolute;
   top: 5rem;
   right: 0;
@@ -6,7 +6,7 @@
   width: 16rem;
 }
 
-.toast-container div + div{
+.toastContainer div + div{
   margin-top: 0.5rem;
 } 
 .toast{

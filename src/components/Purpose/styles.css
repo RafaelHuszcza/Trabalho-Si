@@ -6,7 +6,7 @@
   justify-content: center;
   
 }
-.purposeContent{
+.purpose .purposeContent{
   display: flex;
   margin-top: 3vh;
   height: 37vh;
@@ -19,7 +19,7 @@
 
 
 }
-.purposeText{
+.purpose .purposeText{
   color: White;
 }
 

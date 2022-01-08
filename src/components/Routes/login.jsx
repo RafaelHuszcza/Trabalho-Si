@@ -10,7 +10,7 @@ const RoutesLogin = ({ component: Component, ...rest }) => {
     <Route
       {...rest}
       render={() => isLogged()
-        ? <Redirect to="/feed" />
+        ? <Redirect to="/home" />
         : <Component {...rest} />
       }
     />

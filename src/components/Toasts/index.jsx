@@ -11,7 +11,7 @@ export default function ToastContainer({ toasts=[] }){
     })
 
   return(
-    <div className="toast-container">
+    <div className="toastContainer">
       {styledToasts((styles, item)=>(
         <Toast key={item.id} data={item} styles={styles}/>
       ))}

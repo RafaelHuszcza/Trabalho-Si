@@ -2,13 +2,11 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
 import "./styles.css";
-import NewsDoc from "./news.json"
+import NewsDoc from "../../Content/news.json"
 
 const News = () => {
 
-
-  
-  const [news, setNews] = useState( NewsDoc);
+  const [news, setNews] = useState(NewsDoc);
   const [filteredNews, setFilteredNews] = useState(news);
   const history = useHistory();
   const filtersUsed = []
@@ -24,7 +22,7 @@ const News = () => {
       <div class = "newsFeed">
         {filteredNews.map((props) => (
           
-              <table className = "tableNews" key={props.id}>                
+              <table className = "newsTable" key={props.id}>                
                 <tbody>
                 <tr>
                     <td className= "newsImage" rowSpan="5" ><img  src={props.content.image} alt = "Imagem Noticia"></img></td>
@@ -61,9 +59,6 @@ const News = () => {
       </div>      
       </div>     
     </div>
-    
-    
-
   );
 };
 
