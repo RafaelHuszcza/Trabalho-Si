@@ -63,12 +63,13 @@
   color: #005489;
   font-weight: bold;
   padding-left: 1rem;
+  font-size: 20px;
 
 }
 
 .news .newsTitle {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 24px;
   vertical-align: text-top;
   padding-top: 0.5rem;
   padding-left: 1rem;
@@ -77,14 +78,14 @@
 
 .news .newsDate {
   display: none;  
-  font-size: 12px;
+  font-size: 14px;
   vertical-align:bottom;
   padding-bottom: 5px ;
   justify-content: center;
 }
 
 .news .newsText {
-  font-size:  12px;
+  font-size:  20px;
   display: none;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -96,7 +97,7 @@
 .news .newsMore{
   display: none;
   text-decoration: underline;
-  font-size: 14px;
+  font-size: 16px;
   vertical-align:bottom;
   padding-bottom: 5px ;
   justify-content: center;
@@ -107,7 +108,7 @@
 
 }
 .news .newsMore:hover{
-font-size: 15px;
+font-size: 17px;
 }
 
 .news .newsTable:hover .newsText{
@@ -120,8 +121,8 @@ font-size: 15px;
 .news .newsTable:hover .newsTitle {
   color: #005489;
   transition: color 0.1s;
-  font-size: 16px;
-  
+  font-size: 20px;
+
 }
 
 .news .newsTable:hover .newsType {

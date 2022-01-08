@@ -1,4 +1,5 @@
 .menu {
+  top:0px;
   display: flex;
   width: 100%;
   height: 10vh;
@@ -7,6 +8,7 @@
   justify-content: space-between;
   border-bottom: 2px solid #00bedd;
   position: sticky; 
+  position: -webkit-sticky; 
 }
 .menu .menuLogo #menuTitle {
   width: 70%;
