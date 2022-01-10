@@ -29,8 +29,6 @@ O Blog Meta Team é um blog feito do zero usando React. Ele é o Trabalho Comple
 
 ## 💻 Tecnologias
 
-Foram usadas, principalmente, duas tecnologias:
-
 - [React.js](https://pt-br.reactjs.org/): que permite a criação de páginas e componentes que podem ser reutilizados, além de diversas outras funcionalidades
 
 ## 🚀 Instalando o Blog Meta Team
