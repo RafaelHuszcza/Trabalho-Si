@@ -12,6 +12,7 @@ const ContactUs = () => {
     const [message, setMessage] = useState('');
 
   function handleSubmitClick(e) {
+    e.reset()
     e.preventDefault()
     console.log(`Nome: ${name}\nEmail: ${email}\nTelefone: ${phone}\nMessage: ${message}`)
   }
@@ -26,9 +27,9 @@ const ContactUs = () => {
         <label htmlFor="name">Nome</label> 
         <input type='text' onChange={(e) => setName(e.currentTarget.value)} placeholder='Seu nome' />
         <label htmlFor="name">Email</label> 
-        <input type='text' onChange={(e) => setEmail(e.currentTarget.value)} placeholder='johndoe@email.com' />
+        <input type='email' onChange={(e) => setEmail(e.currentTarget.value)} placeholder='johndoe@email.com' />
         <label htmlFor="name">Telefone</label> 
-        <input type='text' onChange={(e) => setPhone(e.currentTarget.value)} placeholder='(11) 99999-9999' />
+        <input type='number' onChange={(e) => setPhone(e.currentTarget.value)} placeholder='(11) 99999-9999' />
         <label htmlFor="name">Mensagem</label>
         <textarea aria-multiline onChange={(e) => setMessage(e.currentTarget.value)} rows={7} placeholder='Sua mensagem...' /> 
  
