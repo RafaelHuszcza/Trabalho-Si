@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# Blog Meta Team
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![GitHub repo size](https://img.shields.io/github/repo-size/RafaelHuszcza/Trabalho-Si?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/RafaelHuszcza/Trabalho-Si?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/RafaelHuszcza/Trabalho-Si?style=for-the-badge)
+![Bitbucket open issues](https://img.shields.io/bitbucket/issues/RafaelHuszcza/Trabalho-Si?style=for-the-badge)
+![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/RafaelHuszcza/Trabalho-Si?style=for-the-badge)
 
-## Available Scripts
+<!-- Alterar cover quando o projeto estiver 100% funcional -->
+<img src="img/cover.gif" alt="cover">
 
-In the project directory, you can run:
+> Website de leitura de notícias
 
-### `yarn start`
+O space traveling é um blog feito do zero usando Next.js e Prismic CMS. Ele é o desafio principal e o desafio complementar do capítulo III da trilha de React.js do curso Ignite, da Rocketseat. Seu design pode ser encontrado [aqui](https://www.figma.com/file/6lOST9XhVxBPbF0gpyclqR/Desafios-Módulo-3-ReactJS?node-id=0%3A1)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+O desafio principal consistiu na criação de um blog do zero seguindo o [layout fornecido](https://www.figma.com/file/6lOST9XhVxBPbF0gpyclqR/Desafios-Módulo-3-ReactJS?node-id=0%3A1). Já o desafio complementar consistiu na implementação de novas features nesse blog.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### Tarefas principais
 
-### `yarn test`
+- [x] Tela principal e eventos JS;
+- [x] Tela principal que apresenta a ideia do portal de notícias ( do que o site é em poucas palavras) e exibir alguns links para notícias "quentes" atuais;
+- [x] Tela de login, sem obrigatoriedade de banco de dados (pode usar arquivos textos contendo a senha);
+- [x] Tela de apresentação de notícias (será usado um esqueleto padrão e via JavaScript as notícias são exibidas, portanto as notícias estarão em arquivos XML, TXT ou em um Banco de dados e haverá um modelo base para exibição das mesmas);
+- [x] Tela de “Busca” onde o usuário do site poderá localizar notícias de várias maneiras diferentes, ao menos terá opção de busca por título, texto ou palavras chaves da notícia;
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Tarefas complementares
 
-### `yarn build`
+- [x] Versionamento de projeto através da ferramenta GIT;
+- [x] Uso da biblioteca React com o fim de facilitar a criação de páginas;
+- Entre outros.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 💻 Tecnologias
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Foram usadas, principalmente, duas tecnologias:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [React.js](https://pt-br.reactjs.org/): que permite a criação de páginas e componentes que podem ser reutilizados, além de diversas outras funcionalidades
 
-### `yarn eject`
+## 🚀 Instalando o Blog Meta Team
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Para instalar o Blog Meta Team, siga estas etapas:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+# No seu terminal, clone o projeto
+$ git clone https://github.com/RafaelHuszcza/Trabalho-Si.git
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Entre na pasta...
+$ cd Trabalho-Si
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Instale as dependências
+$ yarn install
+```
 
-## Learn More
+## ☕ Usando o Blog Meta Team
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Para usar o Blog Meta Team, siga estas etapas:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+# No seu terminal, dentro de 'Trabalho-Si/', inicie o projeto executando
+$ yarn start
+```
 
-### Code Splitting
+## 📫 Contribuindo para Blog Meta Team
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+> Sua contribuição é muito bem vinda! 😀
 
-### Analyzing the Bundle Size
+Para contribuir com o Blog Meta Team, siga estas etapas:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Bifurque este repositório.
+2. Crie um branch: `git checkout -b <nome_branch>`.
+3. Faça suas alterações e confirme-as: `git commit -m '<mensagem_commit>'`
+4. Envie para o branch original: `git push origin Trabalho-Si / <local>`
+5. Crie a solicitação de pull.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Como alternativa, consulte a documentação do GitHub em [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
