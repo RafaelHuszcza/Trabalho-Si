@@ -178,3 +178,38 @@ font-size: 17px;
 .news .filterButton:hover{
   background-color: #00bedd;
 }
+
+
+.news .newsSearch {
+  display: flex;
+  align-items: left;
+  width: 15vw;
+  height:3rem;
+  padding: 0.5rem;
+  margin-left: 5vw;
+  background-color: white;
+  border-radius: 1rem;
+  margin-top: 3vh;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  
+ 
+}
+.news .newsSearch #search{
+  border-radius: 3px;
+  border: 1px solid #001c43;
+  height: 1.5rem;
+  font-size: 16px;
+  color: #001c43;
+
+}
+.news .newsSearch select{
+  margin-top: 2px;
+  border-radius: 3px;
+  border: 1px solid #001c43;
+  height: 1.5rem;
+  font-size: 14px;
+  color: #001c43;
+
+  
+}
