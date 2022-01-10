@@ -19,7 +19,7 @@ O Blog Meta Team é um blog feito do zero usando React. Ele é o Trabalho Comple
 - [x] Tela principal que apresenta a ideia do portal de notícias ( do que o site é em poucas palavras) e exibir alguns links para notícias "quentes" atuais;
 - [x] Tela de login, sem obrigatoriedade de banco de dados (pode usar arquivos textos contendo a senha);
 - [x] Tela de apresentação de notícias (será usado um esqueleto padrão e via JavaScript as notícias são exibidas, portanto as notícias estarão em arquivos XML, TXT ou em um Banco de dados e haverá um modelo base para exibição das mesmas);
-- [] Tela de “Busca” onde o usuário do site poderá localizar notícias de várias maneiras diferentes, ao menos terá opção de busca por título, texto ou palavras chaves da notícia;
+- [ ] Tela de “Busca” onde o usuário do site poderá localizar notícias de várias maneiras diferentes, ao menos terá opção de busca por título, texto ou palavras chaves da notícia;
 
 #### Tarefas complementares
 
