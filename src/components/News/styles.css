@@ -174,9 +174,7 @@ font-size: 17px;
   background-color: #00bedd;
 }
 
-.news .filterButton:focus{
-  background-color: #00bedd;
-}
+
 .news .filterButton:hover{
   background-color: #00bedd;
 }

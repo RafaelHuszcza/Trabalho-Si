@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
 import "./styles.css";
-import NewsDoc from "../../Content/news.json"
+import NewsDoc from "../../content/news.json"
 
 
 
