@@ -11,9 +11,7 @@
 
 > Website de leitura de notícias
 
-O space traveling é um blog feito do zero usando Next.js e Prismic CMS. Ele é o desafio principal e o desafio complementar do capítulo III da trilha de React.js do curso Ignite, da Rocketseat. Seu design pode ser encontrado [aqui](https://www.figma.com/file/6lOST9XhVxBPbF0gpyclqR/Desafios-Módulo-3-ReactJS?node-id=0%3A1)
-
-O desafio principal consistiu na criação de um blog do zero seguindo o [layout fornecido](https://www.figma.com/file/6lOST9XhVxBPbF0gpyclqR/Desafios-Módulo-3-ReactJS?node-id=0%3A1). Já o desafio complementar consistiu na implementação de novas features nesse blog.
+O Blog Meta Team é um blog feito do zero usando React. Ele é o Trabalho Complementar 3.1 proposto na disciplina de Sistemas de Informação, ministrada pelo professor Rafael Berri. Seu design pode ser encontrado [aqui](https://www.canva.com/design/DAE0-o_Qdz8/3CIb63AvQM7X0AZgDrpg0g/view?utm_content=DAE0-o_Qdz8&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton#3)
 
 #### Tarefas principais
 
