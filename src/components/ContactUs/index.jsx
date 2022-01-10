@@ -32,7 +32,7 @@ const ContactUs = () => {
         <label htmlFor="name">Mensagem</label>
         <textarea aria-multiline onChange={(e) => setMessage(e.currentTarget.value)} rows={7} placeholder='Sua mensagem...' /> 
  
-        <input type="submit" value="Enviar" />
+        <input id="submitButton" type="submit" value="Enviar" />
 
       </form>   
     </div>

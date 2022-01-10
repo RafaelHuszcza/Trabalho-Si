@@ -4,7 +4,7 @@
   margin: 0;
   width: 100%;
   min-height: 84vh;
-  background-color: #005489;
+  background-color: #001c43;
   justify-content: center;
   align-items: center;
 }
@@ -20,7 +20,7 @@
 }
 
 .contact .contactContainer label, h2 {
-  color: #005489;
+  color: #001c43;
   font-weight: bold;
 }
 
@@ -33,17 +33,27 @@
   margin-bottom: 8px;
 
   padding: 5px;
-  border: 2px solid #005489;
+  border: 2px solid #001c43;
   border-radius: 5px;
 }
 
-.contact .contactContainer input[type='submit'] {
-  background-color: #005489;
-  color: white;
+.contact .contactContainer #submitButton {
+  background-color: #00bedd;
+  transition: color 200ms;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition-property: background-color, color;
+  color: #fff;
+  border: 2px solid ;
+  border-radius: 10px;
   font-weight: bold;
-  font-size: large;
+  font-size: 16px;
   width: 15vw;
   align-self: center;
   padding: 15px;
   margin-top: 15px;
+  cursor: pointer;
+}
+.contact .contactContainer #submitButton:hover{
+  background-color: #001c43;
 }
