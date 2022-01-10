@@ -6,8 +6,9 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/RafaelHuszcza/Trabalho-Si?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/RafaelHuszcza/Trabalho-Si?style=for-the-badge)
 
+
 <!-- Alterar cover quando o projeto estiver 100% funcional -->
-<img src="img/cover.gif" alt="cover">
+![Cover MetaNews](https://user-images.githubusercontent.com/62501031/148819263-3e8a0c4a-d166-463a-a4b9-e1d731260f59.gif)
 
 > Website de leitura de notícias
 
