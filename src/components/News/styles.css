@@ -170,6 +170,10 @@ font-size: 17px;
   border: 2px solid #005489;
 }
 
+.news .filterButton.selected {
+  background-color: #00bedd;
+}
+
 .news .filterButton:focus{
   background-color: #00bedd;
 }

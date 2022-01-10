@@ -2,12 +2,15 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
 import "./styles.css";
-import NewsDoc from "../../content/news.json"
+import NewsDoc from "../../Content/news.json"
+
+
 
 const News = () => {
 
   const [news, setNews] = useState(NewsDoc);
   const [filteredNews, setFilteredNews] = useState(news);
+  const [currentFilter, setCurrentFilter] = useState('Sem Filtro');
   const history = useHistory();
   const filtersUsed = []
   const filterNews = (searchValue) =>{
@@ -16,6 +19,17 @@ const News = () => {
     })
     setFilteredNews(newNews)
   } 
+
+  function handleFilterClick(props, filter) {
+    if (props != null) {
+      filterNews(props.content.type)
+    }
+    else {
+      filterNews("")
+    }
+    setCurrentFilter(filter)
+  }
+
   return (
     <div className="news">
       <div className="newsContainer">
@@ -49,10 +63,11 @@ const News = () => {
       </div>  
       <div class = "newsFilter">
       <p className="selectFilter">Selecione o Filtro Desejado:</p>
-    <button className="filterButton" onClick={()=> filterNews("")} >Sem Filtro</button>
+      {/* Deixar esse pré-selecionado */}
+    <button className={currentFilter === 'Sem Filtro' ? 'filterButton selected' : 'filterButton'} onClick={()=> handleFilterClick(null, "Sem Filtro")} >Sem Filtro</button>
     {news.map((props) => (      
       filtersUsed.includes(props.content.type) ? "":filtersUsed.push(props.content.type)?    
-      <button className="filterButton" onClick={()=> filterNews(props.content.type)}>{props.content.type}</button>
+      <button className={currentFilter === props.content.type ? 'filterButton selected' : 'filterButton'} onClick={()=> handleFilterClick(props, props.content.type)}>{props.content.type}</button>
       :""
     
     ))}
