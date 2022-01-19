@@ -19,7 +19,7 @@ const ContactUs = () => {
 
   function handleSubmitClick(e) {    
     addToast({ type: "success", title: "Formulário", message:"Enviado com Sucesso" })
-   
+    e.reset()
     e.preventDefault()
     console.log(`Nome: ${name}\nEmail: ${email}\nTelefone: ${phone}\nMessage: ${message}`)
   }
@@ -34,7 +34,7 @@ const ContactUs = () => {
         <label htmlFor="name">Nome</label> 
         <input type='text' onChange={(e) => setName(e.currentTarget.value)} placeholder='Seu nome' />
         <label htmlFor="name">Email</label> 
-        <input type='email' onChange={(e) => setEmail(e.currentTarget.value)} placeholder='johndoe@email.com' />
+        <input required type='email' onChange={(e) => setEmail(e.currentTarget.value)} placeholder='johndoe@email.com' />
         <label htmlFor="name">Telefone</label> 
         <input type='number' onChange={(e) => setPhone(e.currentTarget.value)} placeholder='(11) 99999-9999' />
         <label htmlFor="name">Mensagem</label>

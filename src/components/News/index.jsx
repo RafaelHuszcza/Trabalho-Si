@@ -11,7 +11,7 @@ const News = () => {
   const [news, setNews] = useState(NewsDoc);
   const [filteredNews, setFilteredNews] = useState(news);
   // const [filteredSearch, setFilteredSearch] = useState(filteredNews);
-  const [filterType, setFilterType] = useState('text')
+  // const [filterType, setFilterType] = useState('text')
   const [currentFilter, setCurrentFilter] = useState('Sem Filtro');
   const history = useHistory();
   const filtersUsed = []
