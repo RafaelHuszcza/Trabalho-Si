@@ -10,7 +10,7 @@ const News = () => {
 
   const [news, setNews] = useState(NewsDoc);
   const [filteredNews, setFilteredNews] = useState(news);
-  const [filteredSearch, setFilteredSearch] = useState(filteredNews);
+  // const [filteredSearch, setFilteredSearch] = useState(filteredNews);
   const [filterType, setFilterType] = useState('text')
   const [currentFilter, setCurrentFilter] = useState('Sem Filtro');
   const history = useHistory();
@@ -22,12 +22,12 @@ const News = () => {
     })
     setFilteredNews(newNews)
   } 
-  const filterSearch = (searchValue) =>{
-    const newNewNews = filteredNews.filter((news)=>{ 
-      return news.content[filterType].toLowerCase().includes(searchValue.toLowerCase())
-    })
-    setFilteredSearch(newNewNews)
-  } 
+  // const filterSearch = (searchValue) =>{
+  //   const newNewNews = filteredNews.filter((news)=>{ 
+  //     return news.content[filterType].toLowerCase().includes(searchValue.toLowerCase())
+  //   })
+  //   setFilteredSearch(newNewNews)
+  // } 
 
 
   function handleFilterClick(props, filter) {
@@ -44,7 +44,7 @@ const News = () => {
     <div className="news">
       <div className="newsContainer">
       <div class = "newsFeed">
-        {filteredSearch.map((props) => (          
+        {filteredNews.map((props) => (          
               <table className = "newsTable" key={props.id}>                
                 <tbody>
                 <tr>
@@ -82,7 +82,7 @@ const News = () => {
     
     ))}
       </div>     
-      <div class = "newsSearch">
+      {/* <div class = "newsSearch">
       <input id="search"  onChange={(e) => filterSearch(e.target.value)} type="text" placeholder="Digite a pesquisa"/>
             <div className="customSelect" style={{ width: '100%'}}>
             
@@ -91,7 +91,7 @@ const News = () => {
             <option value="title">Filtrar por Título</option>            
           </select>
           </div>
-          </div>
+          </div> */}
 
 
       </div>   
