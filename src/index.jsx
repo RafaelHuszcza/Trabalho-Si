@@ -11,7 +11,7 @@ function App() {
   return (
       <AuthProvider>
         <ToastProvider>
-          <Routes/>
+          <Routes basename={process.env.PUBLIC_URL} />
         </ToastProvider>
       </AuthProvider>
   );
