@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { useToast } from '../../context/toastContext';
+
+
 
 
 import "./styles.css";
@@ -10,9 +13,13 @@ const ContactUs = () => {
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const [message, setMessage] = useState('');
+    const { addToast } = useToast()
 
-  function handleSubmitClick(e) {
-    e.reset()
+    
+
+  function handleSubmitClick(e) {    
+    addToast({ type: "success", title: "Formulário", message:"Enviado com Sucesso" })
+   
     e.preventDefault()
     console.log(`Nome: ${name}\nEmail: ${email}\nTelefone: ${phone}\nMessage: ${message}`)
   }
