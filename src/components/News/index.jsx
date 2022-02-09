@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
 import "./styles.css";
@@ -10,35 +10,32 @@ const News = () => {
 
   const [news, setNews] = useState(NewsDoc);
   const [filteredNews, setFilteredNews] = useState(news);
-  // const [filteredSearch, setFilteredSearch] = useState(filteredNews);
-  // const [filterType, setFilterType] = useState('text')
+  const [filterType, setFilterType] = useState('text')
   const [currentFilter, setCurrentFilter] = useState('Sem Filtro');
   const history = useHistory();
   const filtersUsed = []
+  const [filterSearch, setFilterSearch] = useState("");
+  const [filterButton, setFilterButton] = useState("");
+  
 
-  const filterNews = (searchValue) =>{
-    const newNews = news.filter((news)=>{   
-      return news.content.type.toLowerCase().includes(searchValue.toLowerCase())
+  function filterNews (){
+    let newNews = news.filter((news)=>{   
+      return (news.content.type.toLowerCase().includes(filterButton.toLowerCase())) && news.content[filterType].toLowerCase().includes(filterSearch.toLowerCase())
     })
+
     setFilteredNews(newNews)
   } 
-  // const filterSearch = (searchValue) =>{
-  //   const newNewNews = filteredNews.filter((news)=>{ 
-  //     return news.content[filterType].toLowerCase().includes(searchValue.toLowerCase())
-  //   })
-  //   setFilteredSearch(newNewNews)
-  // } 
-
 
   function handleFilterClick(props, filter) {
-    if (props != null) {
-      filterNews(props.content.type)
+    if (props != null) { 
+      setFilterButton(props.content.type)
     }
     else {
-      filterNews("")
+      setFilterButton("")
     }
     setCurrentFilter(filter)
   }
+  useEffect(() => {filterNews()}, [filterSearch, filterButton]);
 
   return (
     <div className="news">
@@ -82,8 +79,8 @@ const News = () => {
     
     ))}
       </div>     
-      {/* <div class = "newsSearch">
-      <input id="search"  onChange={(e) => filterSearch(e.target.value)} type="text" placeholder="Digite a pesquisa"/>
+      <div class = "newsSearch">
+      <input id="search"  onChange={(e) => setFilterSearch(e.target.value)} type="text" placeholder="Digite a pesquisa"/>
             <div className="customSelect" style={{ width: '100%'}}>
             
           <select name="filterType" defaultValue="text" onChange={(e)=>{setFilterType(e.target.value)}}>
@@ -91,7 +88,7 @@ const News = () => {
             <option value="title">Filtrar por Título</option>            
           </select>
           </div>
-          </div> */}
+          </div>
 
 
       </div>   
