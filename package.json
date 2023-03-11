@@ -2,7 +2,6 @@
   "name": "trabalho-si",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://rafaelhuszcza.github.io/Trabalho-SI",
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "@testing-library/jest-dom": "^5.11.4",
@@ -17,6 +16,7 @@
     "uuidv4": "^6.2.12",
     "web-vitals": "^1.0.1"
   },
+  "homepage": "https://RafaelHuszcza.github.io/Trabalho-Si",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

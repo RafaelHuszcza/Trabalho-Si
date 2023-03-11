@@ -19,13 +19,14 @@ const PagesRoot = () => (
   <Router>
     <Switch>
       <RoutesLogin path="/Trabalho-Si/login" component={Login} />
-      <RoutesGlobal path="/Trabalho-Si/home" component={Feed} />
+      <RoutesGlobal path="/Trabalho-Si" component={Feed} />
       <RoutesGlobal path="/Trabalho-Si/contato" component={Contact} />
-      {/* <RoutesGlobal path="/sobre" component={}/> */}
+      {/* <RoutesGlobal path="/sobre" component={Login} />
+      <RoutesGlobal path="/" component={Feed} /> */}
       {/* <RoutesGlobal path="/esqueceu-senha" component={}/> */}
-      <Route path="/Trabalho-Si/">
+      {/* <Route path="/Trabalho-Si/">
         <Redirect to="/Trabalho-Si/home" />
-      </Route>
+      </Route> */}
     </Switch>
   </Router>
 );

@@ -12,7 +12,7 @@ const RoutesPrivate = ({ component: Component, ...rest }) => {
       {...rest}
       render={() =>
         isLogged() ? (
-          <Redirect to="/Trabalho-Si/loginhome" />
+          <Redirect to="/Trabalho-Si/home" />
         ) : (
           <Redirect to="/Trabalho-Si/login" />
         )
