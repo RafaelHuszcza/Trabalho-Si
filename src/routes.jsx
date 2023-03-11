@@ -15,17 +15,16 @@ import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Feed from "./pages/Feed";
 
-
 const PagesRoot = () => (
   <Router>
     <Switch>
-      <RoutesLogin path="/login" component={Login}/>
-      <RoutesGlobal path="/home" component={Feed}/>
-      <RoutesGlobal path="/contato" component={Contact}/>
+      <RoutesLogin path="/Trabalho-Si/login" component={Login} />
+      <RoutesGlobal path="/Trabalho-Si/home" component={Feed} />
+      <RoutesGlobal path="/Trabalho-Si/contato" component={Contact} />
       {/* <RoutesGlobal path="/sobre" component={}/> */}
       {/* <RoutesGlobal path="/esqueceu-senha" component={}/> */}
-      <Route path="/">
-        <Redirect to="/home"/>
+      <Route path="/Trabalho-Si/">
+        <Redirect to="/Trabalho-Si/home" />
       </Route>
     </Switch>
   </Router>

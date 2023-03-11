@@ -1,20 +1,23 @@
-import React from 'react';
-import { Route, Redirect} from 'react-router-dom';
+import React from "react";
+import { Route, Redirect } from "react-router-dom";
 
-import { useAuth } from '../../context/authContext'
+import { useAuth } from "../../context/authContext";
 
 const RoutesLogin = ({ component: Component, ...rest }) => {
-  const { isLogged } = useAuth()
+  const { isLogged } = useAuth();
 
-  return(
+  return (
     <Route
       {...rest}
-      render={() => isLogged()
-        ? <Redirect to="/home" />
-        : <Component {...rest} />
+      render={() =>
+        isLogged() ? (
+          <Redirect to="/Trabalho-Si/home" />
+        ) : (
+          <Component {...rest} />
+        )
       }
     />
-  )
-}
+  );
+};
 
 export default RoutesLogin;
